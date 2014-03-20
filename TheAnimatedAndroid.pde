@@ -1,4 +1,4 @@
-/* @pjs preload="optics_angel.jpg, head3.gif, neck1.gif, torso3.gif, upper_arm3.gif, forearm3.gif, upper_leg3.gif, lower_leg3.gif" */
+/* @pjs preload="background/optics_angel.jpg, part/head3.gif, part/neck1.gif, part/torso3.gif, part/upper_arm3.gif, part/forearm3.gif, part/upper_leg3.gif, part/lower_leg3.gif" */
 
 int HEAD = 0;
 int LEFT_SHOULDER = 1;
@@ -37,20 +37,20 @@ PVector point(int frameIndex, int pointIndex) {
 void setup() {
   // needs to be the same size as the background image
   size(700,525);
-  bg = loadImage("optics_angel.jpg");
+  bg = loadImage("background/optics_angel.jpg");
   
-  data = loadStrings("walk");
+  data = loadStrings("motion/walk");
   points = int(data[0]);
   frames = int(data[1]);
   frameRate(25);
   
-  head = new Head("head3.gif",0.15);
-  neck = new Part("neck1.gif",0.5);
-  torso = new Part("torso3.gif",0.13);
-  upperArm = new Part("upper_arm3.gif",0.15);
-  forearm = new Part("forearm3.gif",0.15);
-  upperLeg = new Part("upper_leg3.gif",0.15);
-  lowerLeg = new Part("lower_leg3.gif",0.15);
+  head = new Head("part/head3.gif",0.15);
+  neck = new Part("part/neck1.gif",0.5);
+  torso = new Part("part/torso3.gif",0.13);
+  upperArm = new Part("part/upper_arm3.gif",0.15);
+  forearm = new Part("part/forearm3.gif",0.15);
+  upperLeg = new Part("part/upper_leg3.gif",0.15);
+  lowerLeg = new Part("part/lower_leg3.gif",0.15);
   
   cache = new PVector[points];
 }
