@@ -66,7 +66,7 @@ void draw() {
   lowerLeg.draw(point(frame,LEFT_KNEE),point(frame,LEFT_ANKLE));
   upperLeg.draw(point(frame,LEFT_HIP),point(frame,LEFT_KNEE));
   neck.draw(point(frame,HEAD),point(frame,LEFT_SHOULDER));
-  head.draw(point(frame,HEAD),point(frame,LEFT_SHOULDER));
+  head.draw(point(frame,HEAD));
   torso.draw(point(frame,LEFT_SHOULDER),point(frame,LEFT_HIP));
   forearm.draw(point(frame,LEFT_ELBOW),point(frame,LEFT_WRIST));
   upperArm.draw(point(frame,LEFT_SHOULDER),point(frame,LEFT_ELBOW));

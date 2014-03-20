@@ -7,8 +7,8 @@ class Head {
     this.scaling = scaling;
   }
   
-  void draw(PVector head, PVector shoulder) {
-    if (head!=null && shoulder!=null) {
+  void draw(PVector head) {
+    if (head!=null) {
       pushMatrix();
       translate(head.x,head.y);
       scale(scaling);
