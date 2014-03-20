@@ -23,15 +23,12 @@ PImage bg;
 Head head;
 Part torso, upperArm, forearm, upperLeg, lowerLeg, neck;
 
-PVector point(int frameIndex, int pointIndex) {
-  int i = 2 + frameIndex*points*2 + pointIndex*2;
-  int x = int(data[i]);
-  int y = int(data[i+1]);
-  PVector p = new PVector(x,y);
-  
-  if (x==0 && y==0) p = cache[pointIndex];
-  else cache[pointIndex] = p;
-  return p;
+PVector point(int f, int p) {
+  int i = 2 + f*points*2 + p*2;
+  PVector v = new PVector(int(data[i]),int(data[i+1]));
+  if (v.x==0 && v.y==0) v = cache[p];
+  else cache[p] = v;
+  return v;
 }
 
 void setup() {
