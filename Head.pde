@@ -8,13 +8,10 @@ class Head {
   }
   
   void draw(PVector head) {
-    if (head!=null) {
-      pushMatrix();
-      translate(head.x,head.y);
-      scale(scaling);
-      image(img,0,0);
-      popMatrix();
-    }
+    pushMatrix();
+    translate(head.x,head.y);
+    scale(scaling);
+    image(img,0,0);
+    popMatrix();
   }
-  
 }

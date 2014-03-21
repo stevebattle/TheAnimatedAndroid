@@ -26,8 +26,8 @@ Part torso, upperArm, forearm, upperLeg, lowerLeg, neck;
 PVector point(int f, int p) {
   int i = 2 + f*points*2 + p*2;
   PVector v = new PVector(int(data[i]),int(data[i+1]));
-  if (v.x==0 && v.y==0) v = cache[p];
-  else cache[p] = v;
+  if (v.x==0 && v.y==0 && cache[p]!=null) return cache[p];
+  cache[p] = v;
   return v;
 }
 

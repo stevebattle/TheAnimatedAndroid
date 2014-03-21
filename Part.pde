@@ -12,21 +12,17 @@ class Part {
   }
   
   float angleBetween(PVector a, PVector b) { 
-    double xDiff = b.x - a.x; 
-    double yDiff = b.y - a.y; 
-    return (float) Math.atan2(yDiff, xDiff); 
+    return (float) Math.atan2(b.y-a.y, b.x-a.x); 
   }
   
   void draw(PVector a, PVector b) {
-    if (a!=null && b!=null) {
-      pushMatrix();
-      PVector m = midpoint(a,b);
-      translate(m.x,m.y);
-      scale(scaling);
-      rotate(angleBetween(a,b)-PI/2);
-      image(img,0,0);
-      popMatrix();
-    }
+    pushMatrix();
+    PVector m = midpoint(a,b);
+    translate(m.x,m.y);
+    scale(scaling);
+    rotate(angleBetween(a,b)-PI/2);
+    image(img,0,0);
+    popMatrix();
   }
   
 }
