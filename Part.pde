@@ -12,7 +12,7 @@ class Part {
   }
   
   float angleBetween(PVector a, PVector b) { 
-    return (float) atan2(b.y-a.y, b.x-a.x); 
+    return atan2(b.y-a.y, b.x-a.x); 
   }
   
   void draw(PVector a, PVector b) {
